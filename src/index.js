@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use('/api/users', userRouter);
 
+console.log(process.env.CONN_STR);
 mongoose
   .connect(process.env.CONN_STR)
   .then((res) => {
